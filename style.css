@@ -1,0 +1,370 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #080b18;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    max-width: 480px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 22px 18px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: #6c4be8;
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 24px;
+}
+
+.logo h1 {
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.logo p,
+.online {
+    color: #9ba7c5;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.online {
+    color: #64dfad;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+p {
+    color: #aab4cf;
+}
+
+.setup-card,
+.schedule-card,
+.menu-card,
+.pair-card {
+    background: #131a2e;
+    border: 1px solid #252e49;
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+.setup-card > p {
+    margin-bottom: 24px;
+}
+
+.course-list,
+.group-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0 22px;
+}
+
+.course,
+.group {
+    background: #202a44;
+    color: white;
+    border: 1px solid #34405f;
+    border-radius: 12px;
+    padding: 12px 18px;
+}
+
+.selected {
+    background: #694be5 !important;
+    border-color: #927cff !important;
+}
+
+.continue-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 13px;
+    background: #694be5;
+    color: white;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.schedule-card {
+    background: linear-gradient(135deg, #5335b9, #2862a8);
+    padding: 23px;
+    cursor: pointer;
+}
+
+.schedule-card p {
+    color: #e0e5ff;
+    margin-bottom: 15px;
+}
+
+.schedule-card span {
+    font-size: 12px;
+    color: #d0d9ff;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.menu-card {
+    min-height: 105px;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu-card small {
+    display: block;
+    color: #9ba7c5;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.user-info {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 13px;
+}
+
+.developer-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.developer-button,
+.back-button {
+    background: #202a44;
+    border: 1px solid #34405f;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+}
+
+.back-button {
+    margin-bottom: 22px;
+}
+
+.day-title {
+    margin: 15px 0;
+    color: #aab4cf;
+    font-size: 14px;
+}
+
+.pair-card {
+    margin-bottom: 12px;
+}
+
+.pair-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.pair-number {
+    color: #9b86ff;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.pair-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cabinet {
+    background: #263b60;
+    color: #9ecbff;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.pair-time {
+    color: #9ba7c5;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* Настройки */
+
+.settings-card {
+    background: #131a2e;
+    border: 1px solid #252e49;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.settings-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.settings-description {
+    color: #9ba7c5;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 0;
+    border-top: 1px solid #29334b;
+}
+
+.setting-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.setting-info strong {
+    font-size: 14px;
+}
+
+.setting-info small {
+    color: #9ba7c5;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 49px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: #35405b;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    top: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.25s;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background: #694be5;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+    transform: translateX(21px);
+}
+
+.time-input {
+    width: 100%;
+    padding: 15px;
+    background: #202a44;
+    color: white;
+    border: 1px solid #34405f;
+    border-radius: 13px;
+    font-size: 18px;
+    outline: none;
+    color-scheme: dark;
+}
+
+.save-settings-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 16px;
+    background: linear-gradient(135deg, #694be5, #496bdc);
+    border: none;
+    border-radius: 13px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.save-settings-button:active {
+    transform: scale(0.98);
+}
+
+.settings-note {
+    color: #64dfad;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    color: #66718e;
+    font-size: 11px;
+    margin-top: 40px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 360px) {
+    .app {
+        padding: 18px 12px;
+    }
+
+    .cabinet {
+        font-size: 11px;
+    }
+}
